@@ -1,0 +1,55 @@
+//first we have to login 
+//we have to work in layers
+let posX;
+let textMe;
+let posY;
+let arrayFlowers = ["🌺", "🏃‍", "👩‍🦯", "🌼",'🌴', "🌹", "🌻"];
+function setup() {
+  createCanvas(600, 400);
+  
+  posX=140;
+  posY=360;
+  textMe='Beautiful Sunny day'
+}
+
+function draw() {
+  background("blue");
+  frameRate(5);
+  for (let b=0;b<3;b++){
+  
+  text("🦅",random(20,600),random(30,100))}
+  //sun 
+   //strokeWeight(2) ;
+ // stroke('black');
+ // line(320,50,290,70);
+  
+  fill("yellow");
+  stroke("orange")
+  strokeWeight(10);
+
+  textSize(20);
+  text("it's a sunny DAY",30,30)
+  circle(350,50,50);
+  noStroke();
+  fill(255,180,100);
+  rect(0, 340, width, 60);
+  x = 10;
+  for (let i = 0; i < arrayFlowers.length; i++) {
+    if (i == 1 || i == 2) {
+      textSize(75)
+    } else if (i==4) {textSize(100)}else {
+      textSize(30);
+    }
+
+    text(arrayFlowers[i], x, 340);
+    x += 80;
+  }
+  fill("red");
+  circle(posX,posY,30);
+}
+function mousePressed(){
+  if (posX>400){posX=10}
+  else 
+  {posX+=10};
+}
+
